@@ -25,6 +25,8 @@ The script checks if the following programs are installed on the system, and ins
 - [SuperCollider](https://supercollider.github.io/) for backend audio generation, and:
     - [SuperDirt](https://github.com/musikinformatik/SuperDirt): sample library used by tidal
     - [sc-3 plugins](https://github.com/supercollider/sc3-plugins): unit generator plugins
+- SuperCollider's `startup.scd` configured with the official startup file from start guide
+https://tidalcycles.org/docs/getting-started/tidal_start#custom-supercollider-server-options
 
 ### Running tidal-bootstrap
 For best results, first install the Apple Xcode command line tools.
