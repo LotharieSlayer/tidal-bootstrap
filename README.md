@@ -4,8 +4,9 @@ This installation script is an "ad-hoc" solution. Effort is made to ensure it wo
 
 ## Summary
 ### OS support
-- Tested on Mac Intel: Big Sur, Monterey
+- Tested on Apple Silicon: macOS 26 / 27 (Tidal, Pulsar, SuperCollider 3.14.1)
 - Install on M1 (Silicon) OSX Ventura has been validated
+- Tested on Mac Intel: Big Sur, Monterey
 - Support for Linux has been removed, the script will exit.
 
 #### Description
@@ -37,6 +38,12 @@ curl https://raw.githubusercontent.com/tidalcycles/tidal-bootstrap/master/tidal-
 ```
 
 Note: if there are failures, the script can be run again. Correctly installed components will be skipped.
+
+To force a reinstall of everything the script manages (tidal, Pulsar, the tidalcycles plugin, SuperCollider, sc3-plugins and SuperDirt), pass `--reinstall`:
+
+```
+curl https://raw.githubusercontent.com/tidalcycles/tidal-bootstrap/master/tidal-bootstrap.command -sSf | sh -s -- --reinstall
+```
 
 ### sh profiles
 macOS by default does not install a shell profile (.bashrc for bash, .zshrc for zsh). Haskell requires a profile file to be present. This script uses the "touch" command to create these if they are not there then adds a command that will add the ghcup path to your PATH, by running `~/.ghcup/env`
